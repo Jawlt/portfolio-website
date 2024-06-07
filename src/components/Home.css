@@ -1,0 +1,30 @@
+.typing-container {
+    padding-top: 250px;
+    padding-left: 8em;
+}
+
+/* Remove default margins and paddings */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-size: 55px;
+    color: #000;
+}
+  
+h2 {
+    font-size: 35px;
+    color: #3F72AF;
+}
+  
+h3 { 
+    font-size: 20px;
+    color: #000;
+    width: 675px;
+    padding-top: 15px;
+}
+
+
+  

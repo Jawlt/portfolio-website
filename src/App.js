@@ -16,8 +16,8 @@ function App() {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Jwalant's Portfolio</title>
-          <link rel="canonical" href="http://jawlt.ca/" />
-          <meta name="description" content="Portfolio Website" />
+          <link rel="canonical" href="http://jawlt.ca/"/>
+          <meta name="description" content="Portfolio Website"/>
         </Helmet>
         <Navbar />
         <Routes>

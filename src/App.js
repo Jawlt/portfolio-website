@@ -7,11 +7,18 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      <div className="App">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Jwalant's Portfolio</title>
+          <link rel="canonical" href="http://jawlt.ca/" />
+          <meta name="description" content="Portfolio Website" />
+        </Helmet>
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />

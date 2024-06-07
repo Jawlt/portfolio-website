@@ -19,10 +19,7 @@ jobs:
         
         - name: Deploy with gh-pages
           run: |
-            git config --global user.email 'jawlt'
-            git config --global user.name 'jwalant1015@yahoo.com'
-            git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+            git config --global user.email "jawlt"
+            git config --global user.name "jwalant1015@yahoo.com"
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   
             npm run deploy
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            

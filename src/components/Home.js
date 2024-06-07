@@ -21,8 +21,8 @@ function Home() {
         /> 
       </h2>
       <h3>
-        <ReactTyped strings={["Welcome to my portfolio website. I am passionate about coding and thrive on developing simple yet innovative solutions to problems." 
-        +"My dedication to creating unique and efficient code drives me to continuously improve in order to make a positive impact through the use of technology."]} 
+        <ReactTyped strings={["Welcome to my portfolio website. I am passionate about coding and strive to develop simple yet innovative solutions to problems." 
+        +" My dedication to creating unique and efficient code drives me to continuously improve in order to make a positive impact through the use of technology."]} 
         typeSpeed={1} 
         showCursor={false}
         />

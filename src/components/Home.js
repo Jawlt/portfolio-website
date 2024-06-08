@@ -22,6 +22,7 @@ function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("Sending email...");
+    console.log(process.env.EMAILJS_SERVICE_ID);
     emailjs.sendForm(
       process.env.EMAILJS_SERVICE_ID,
       process.env.EMAILJS_TEMPLATE_ID,

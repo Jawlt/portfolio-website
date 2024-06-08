@@ -3,6 +3,9 @@ import Pdf from './files/Resume.pdf';
 import './Home.css';
 import {ReactTyped} from 'react-typed';
 import emailjs from '@emailjs/browser';
+const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'default_public_key';
+const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'default_service_id';
+const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'default_template_id';
 
 function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -24,10 +27,10 @@ function Home() {
     console.log("Sending email...");
     console.log(process.env.EMAILJS_SERVICE_ID);
     emailjs.sendForm(
-      process.env.EMAILJS_SERVICE_ID,
-      process.env.EMAILJS_TEMPLATE_ID,
+      emailJsServiceID,
+      emailJsTemplateID,
       e.target,
-      process.env.EMAILJS_PUBLIC_KEY
+      emailJsPublicKey
     )
     .then((result) => {
       console.log("Email sent successfully:", result.text);

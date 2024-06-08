@@ -7,8 +7,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import {Helmet} from "react-helmet";
-import {Element} from 'react-scroll';
-
+import { Element } from 'react-scroll';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {

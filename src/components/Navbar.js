@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Navbar.css'; 
+import { Link } from 'react-scroll';
+import './Navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,19 +19,19 @@ function Navbar() {
       </button>
       <ul className={`navbar-list ${isOpen ? 'open' : ''}`}>
         <li className="navbar-item">
-          <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
+          <Link to="home" smooth={true} duration={1} onClick={toggleMenu}>Home</Link>
         </li>
         <li className="navbar-item">
-          <NavLink to="/Projects" activeClassName="active-link">Projects</NavLink>
+          <Link to="projects" smooth={true} duration={1} onClick={toggleMenu}>Projects</Link>
         </li>
         <li className="navbar-item">
-          <NavLink to="/Skills" activeClassName="active-link">Skills</NavLink>
+          <Link to="skills" smooth={true} duration={1} onClick={toggleMenu}>Skills</Link>
         </li>
         <li className="navbar-item">
-          <NavLink to="/About" activeClassName="active-link">About</NavLink>
+          <Link to="about" smooth={true} duration={1} onClick={toggleMenu}>About</Link>
         </li>
         <li className="navbar-item">
-          <NavLink to="/Contact" activeClassName="active-link">Contact</NavLink>
+          <Link to="contact" smooth={true} duration={1} onClick={toggleMenu}>Contact</Link>
         </li>
       </ul>
     </nav>

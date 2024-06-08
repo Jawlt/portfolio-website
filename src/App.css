@@ -1,12 +1,24 @@
-/* Styling for the app container */
+/* App.css */
 .App {
   background-color: #eee;
   min-height: 500vh;
   width: 100%;
-  overflow-x: auto; /* Prevent horizontal overflow */
+  
 }
 
 /* Smooth scrolling */
-html {
+body, html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.section {
+  height: 100vh; /* Each section takes up the full viewport height */
+  display: flex;
+  width: 100%; /* Ensure it does not exceed the viewport width */
 }

@@ -5,7 +5,7 @@
 
 /* navbar styling */
 .navbar {
-  position: fixed; /* fixed navbar for when scrolling */
+  position: absolute; /* fixed navbar for when scrolling */
   top: 0;
   left: 0; 
   width: 100%; 
@@ -22,7 +22,7 @@
 .logo {
   font-size: 2em;
   font-weight: bold;
-  margin-left: 1em; 
+  margin-left: 4em; 
 }
 
 /* menu toggle button styling */
@@ -40,7 +40,7 @@
   display: flex; /* display items in a row */
   margin: 0;
   padding: 0;
-  padding-right: 3em;
+  padding-right: 5em;
 }
 
 .navbar-item a {
@@ -52,7 +52,7 @@
   border-radius: 0.5rem;
 }
 
-.navbar-item a:not(.active):hover {
+.navbar-item a:hover {
   background-color: #DBE2EF; /* changes hover background color on navbar items */
 }
 
@@ -60,6 +60,10 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* shows toggle button */
+  }
+
+  .logo{
+    margin-left: 0;
   }
 
   .navbar-list {
@@ -90,3 +94,4 @@
     
   }
 }
+

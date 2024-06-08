@@ -1,30 +1,173 @@
-.typing-container {
-    padding-top: 250px;
-    padding-left: 8em;
+/* Home.css */
+.home-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10em;
+    left: 6em;
+    position: relative; /* Removed absolute positioning */
+    transition: filter 0.3s ease;
 }
 
-/* Remove default margins and paddings */
-body, h1, h2, h3, p {
+.home-section.blurred {
+    filter: blur(5px); /* Apply blur effect when contact form is open */
+}
+
+#bubble {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 620px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+    margin-bottom: 20px; /* Space between the description and buttons */
+}
+
+.description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 620px;
+    width: 90%;
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+    margin-bottom: 20px; /* Space between the description and buttons */
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Space between the buttons */
+}
+
+.resume, .contact {
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 160px;
+    width: auto;
+    flex: 1;
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+.resume {
+    color: #DBE2EF;
+    background-color: #3F72AF;
+    border: 2px solid #3F72AF; 
+}
+
+.contact {
+    color: #112D4E;
+    background-color: #DBE2EF;
+    border: 2px solid #3F72AF; 
+}
+
+.resume a, .contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.resume p, .contact p {
     margin: 0;
-    padding: 0;
-  }
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 10px;
+        position: static; /* Adjust for smaller screens */
+    }
+
+    #bubble, .description, .resume, .contact {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
 
 h1 {
-    font-size: 55px;
+    font-size: 4.5rem;
     color: #000;
 }
-  
+
 h2 {
-    font-size: 35px;
+    font-size: 2em;
     color: #3F72AF;
 }
-  
-h3 { 
-    font-size: 20px;
+
+h3 {
     color: #000;
-    width: 675px;
-    padding-top: 15px;
+    font-size: 1em;
 }
 
-
+/* Contact Popup */
+.contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Darken background */
+    z-index: 1000;
+}
   
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+  
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.contact-form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #3F72AF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+  
+.close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ccc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

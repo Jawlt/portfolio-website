@@ -23,10 +23,10 @@ function Home() {
     e.preventDefault();
     console.log("Sending email...");
     emailjs.sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
       e.target,
-      process.env.REACT_APP_PUBLIC_KEY
+      process.env.EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
       console.log("Email sent successfully:", result.text);

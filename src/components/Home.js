@@ -5,8 +5,6 @@ import {ReactTyped} from 'react-typed';
 import emailjs from '@emailjs/browser';
 
 function Home() {
-  // Load environment variables from .env file
-  require('dotenv').config();
   const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;

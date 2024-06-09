@@ -14,10 +14,7 @@ jobs:
     
     - name: Install dependencies
       run: npm install
-
-    - name: Build
-      run: npm run build
-            
+      
     # Create the .env file dynamically during the workflow run
     - name: Deploy and Create .env file
       run: |

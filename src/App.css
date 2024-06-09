@@ -10,7 +10,7 @@
 body, html {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden; /* prevents horizontal overflow (scroll bar) */
 }
 
 *, *::before, *::after {
@@ -18,7 +18,7 @@ body, html {
 }
 
 .section {
-  height: 100vh; /* Each section takes up the full viewport height */
+  height: 150vh; /* ensures each section takes up the full viewport height */
   display: flex;
-  width: 100%; /* Ensure it does not exceed the viewport width */
+  width: 100%; /* ensures it does not exceed the viewport width */
 }

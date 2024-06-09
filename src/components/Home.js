@@ -77,6 +77,9 @@ function Home() {
             />
           </h3>
         </div>
+        <div className="picture-container">
+          <div className="picture-background"><img src="https://picsum.photos/400" alt="Random" /></div>
+        </div>
         <div className="button-container">
           <div className="resume">
             <a href="#resume" onClick={onResumeClick}>

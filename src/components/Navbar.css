@@ -22,7 +22,7 @@
 .logo {
   font-size: 2em;
   font-weight: bold;
-  margin-left: 4em; 
+  margin-left: 8%; 
 }
 
 /* menu toggle button styling */
@@ -40,7 +40,7 @@
   display: flex; /* display items in a row */
   margin: 0;
   padding: 0;
-  padding-right: 5em;
+  padding-right: 8%; 
 }
 
 .navbar-item a {
@@ -62,8 +62,8 @@
     display: block; /* shows toggle button */
   }
 
-  .logo{
-    margin-left: 0;
+  .logo {
+    margin-left: 2%; /* changed for smaller screens */
   }
 
   .navbar-list {
@@ -91,7 +91,5 @@
     width: 100%;
     padding: 0.5rem 0.5rem;
     margin: 0.2rem 0.5rem;
-    
   }
 }
-

@@ -1,59 +1,61 @@
-/* Home.css */
 .home-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* flex direction as row */
+    flex-wrap: wrap; /* allows wrapping */
     height: 100vh;
     width: 100%;
+    align-items: flex-start; /* aligns items to the start */
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 10em;
-    left: 6em;
-    position: relative; /* Removed absolute positioning */
+    justify-content: space-between;
+    padding: 2%; 
+    top: 12%;
+    left: 12%;
+    position: relative;
     transition: filter 0.3s ease;
 }
 
 .home-section.blurred {
-    filter: blur(5px); /* Apply blur effect when contact form is open */
+    filter: blur(5px); /* applys blur effect when contact form is open */
 }
 
 #bubble {
     background-color: #eee;
-    padding: 20px;
+    padding: 2%; 
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 620px;
     width: 100%;
-    box-sizing: border-box; /* Include padding and border in element's width and height */
-    margin-bottom: 20px; /* Space between the description and buttons */
 }
 
 .description {
     background-color: white;
-    padding: 20px;
+    padding: 2%; 
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 620px;
     width: 90%;
-    box-sizing: border-box; /* Include padding and border in element's width and height */
-    margin-bottom: 20px; /* Space between the description and buttons */
+    order: 1; /* ensures the description comes first */
 }
 
 .button-container {
+    position: absolute;
+    transform: translate(0%, 18em);
     display: flex;
-    gap: 20px; /* Space between the buttons */
+    gap: 2%; 
+    margin-top: 2%; 
+    width: 100%; /* makes the button container take the full width */
+    order: 2; /* ensures the button container comes right after the description */
 }
 
 .resume, .contact {
     font-size: 1em;
-    padding: 15px;
+    padding: 1.5%;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 160px;
+    min-width: 160px;
     width: auto;
     flex: 1;
-    box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
 .resume {
@@ -79,25 +81,8 @@
     font-weight: bold;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .home-section {
-        padding: 10px;
-        position: static; /* Adjust for smaller screens */
-    }
-
-    #bubble, .description, .resume, .contact {
-        width: 100%;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
-}
-
 h1, h2, h3 {
-    margin: 10px 0;
+    margin: 1% 0; 
 }
 
 h1 {
@@ -125,13 +110,13 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.5); /* Darken background */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
   
 .contact-form {
     background-color: white;
-    padding: 20px;
+    padding: 2%; 
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -140,21 +125,21 @@ h3 {
 }
   
 .contact-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 2%; 
 }
   
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 1%; 
+    margin: 1% 0; 
     border: 1px solid #ccc;
     border-radius: 5px;
 }
   
 .contact-form button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 1% 2%;
+    margin-top: 1%;
     border: none;
     background-color: #3F72AF;
     color: white;
@@ -163,11 +148,45 @@ h3 {
  }
   
 .close-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 2%; 
+    padding: 1% 2%; 
     border: none;
     background-color: #ccc;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.picture-container {
+    position: relative;
+    transform: translate(250%, -80%);
+    margin-right: 0;
+    display: flex;
+    width: 40vw; /* relative units for width */
+    height: 40vw; /* relative units for height to maintain aspect ratio */
+    max-width: 400px;
+    max-height: 400px;
+    background-color: #DBE2EF;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    order: 1; 
+}
+
+.picture-background img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.picture-background {
+    position: absolute;
+    top: 3%; 
+    right: 3%; 
+    width: 40vw; /* relative units for width */
+    height: 40vw; /*  relative units for height to maintain aspect ratio */
+    max-width: 400px;
+    max-height: 400px;
+    z-index: 1; 
 }

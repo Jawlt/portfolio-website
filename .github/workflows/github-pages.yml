@@ -19,14 +19,17 @@ jobs:
       run: npm run build
 
     # Create the .env file dynamically during the workflow run
-    - name: Deploy and Create .env file
+    - name: Create .env file
       run: |
-        touch .env
-        echo REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.GITHUB_EMAILJS_PUBLIC_KEY }} >> .env
-        echo REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.GITHUB_EMAILJS_SERVICE_ID }} >> .env
-        echo REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.GITHUB_EMAILJS_TEMPLATE_ID }} >> .env
-        cat .env
+        echo "EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
+        echo "EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
+        echo "EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
 
+    - name: Verify .env file creation
+      run: cat .env
+      
+    - name: Deploy 
+      run: |
         git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
         git config --global user.email email:${{ secrets.GITHUB_EMAIL }}
         git remote set-url origin https://access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   

@@ -14,13 +14,18 @@ jobs:
     
     - name: Install dependencies
       run: npm install
-      
+
+    - name: Build
+      run: npm build
+
     # Create the .env file dynamically during the workflow run
     - name: Deploy and Create .env file
       run: |
+        touch .env
         echo REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.GITHUB_EMAILJS_PUBLIC_KEY }} >> .env
         echo REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.GITHUB_EMAILJS_SERVICE_ID }} >> .env
         echo REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.GITHUB_EMAILJS_TEMPLATE_ID }} >> .env
+        cat .env
 
         git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
         git config --global user.email email:${{ secrets.GITHUB_EMAIL }}

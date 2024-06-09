@@ -5,9 +5,9 @@ import {ReactTyped} from 'react-typed';
 import emailjs from '@emailjs/browser';
 
 function Home() {
-  const emailJsPublicKey = process.env.REACT_APP_PUBLIC_KEY || process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-  const emailJsServiceID = process.env.REACT_APP_SERVICE_ID || process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const emailJsTemplateID = process.env.REACT_APP_TEMPLATE_ID || process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -26,9 +26,6 @@ function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("Sending email...");
-    console.log(emailJsServiceID);
-    console.log(emailJsTemplateID);
-    console.log(emailJsPublicKey);
     emailjs.sendForm(
       emailJsServiceID,
       emailJsTemplateID,

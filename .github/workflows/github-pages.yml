@@ -21,13 +21,13 @@ jobs:
     # Create the .env file dynamically during the workflow run
     - name: Create .env file
       run: |
-        echo "EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
-        echo "EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
-        echo "EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
+        echo "REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
+        echo "REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
+        echo "REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
 
     - name: Verify .env file creation
       run: cat .env
-      
+
     - name: Deploy 
       run: |
         git config --global user.name name:${{ secrets.GITHUB_USERNAME }}

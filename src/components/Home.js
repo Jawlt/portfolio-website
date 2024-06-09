@@ -3,11 +3,12 @@ import Pdf from './files/Resume.pdf';
 import './Home.css';
 import {ReactTyped} from 'react-typed';
 import emailjs from '@emailjs/browser';
-const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'default_public_key';
-const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'default_service_id';
-const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'default_template_id';
 
 function Home() {
+  const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || process.env.REACT_APP_PUBLIC_KEY;
+  const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || process.env.REACT_APP_SERVICE_ID;
+  const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || process.env.REACT_APP_TEMPLATE_ID;
+
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const onResumeClick = () => {
@@ -25,7 +26,8 @@ function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("Sending email...");
-    console.log(process.env.EMAILJS_SERVICE_ID);
+    console.log(emailJsServiceID);
+    console.log(emailJsTemplateID);
     emailjs.sendForm(
       emailJsServiceID,
       emailJsTemplateID,

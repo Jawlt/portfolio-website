@@ -11,15 +11,20 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4
         
-        - name: Build
+        - name: Install dependencies
           run: npm install
+
+        - name: Build
+          run: npm run build
         
-        - name: Deploy with gh-pages
+        - name: Deploy
           env:
             EMAILJS_PUBLIC_KEY: ${{ secrets.GITHUB_EMAILJS_PUBLIC_KEY }}
             EMAILJS_SERVICE_ID: ${{ secrets.GITHUB_EMAILJS_SERVICE_ID }}
             EMAILJS_TEMPLATE_ID: ${{ secrets.GITHUB_EMAILJS_TEMPLATE_ID }}
           run: |
+            # Create an environment file with the secret
+            echo "EMAILJS_PUBLIC_KEY=${{ secrets.GITHUB_USERNAME }}" >> .env
             git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
             git config --global user.email email:${{ secrets.GITHUB_EMAIL }}
             git remote set-url origin https://access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   

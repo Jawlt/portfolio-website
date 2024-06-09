@@ -24,6 +24,15 @@ jobs:
         echo "REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.PUBLIC_KEY }}" >> .env
         echo "REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.SERVICE_ID }}" >> .env
         echo "REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}" >> .env
+
+        echo "EMAILJS_PUBLIC_KEY=${{ secrets.PUBLIC_KEY }}"
+        echo "EMAILJS_SERVICE_ID=${{ secrets.SERVICE_ID }}"
+        echo "EMAILJS_TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}"
+
+        echo "EMAILJS_PUBLIC_KEY=${{ secrets.GITHUB_EMAILJS_PUBLIC_KEY }}"
+        echo "EMAILJS_SERVICE_ID=${{ secrets.GITHUB_EMAILJS_SERVICE_ID }}"
+        echo "EMAILJS_TEMPLATE_ID=${{ secrets.GITHUB_EMAILJS_TEMPLATE_ID }}"
+        
         git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
         git config --global user.email email:${{ secrets.GITHUB_EMAIL }}
         git remote set-url origin https://access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   

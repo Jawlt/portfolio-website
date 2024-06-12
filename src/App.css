@@ -1,12 +1,11 @@
 /* App.css */
 .App {
   background-color: #eee;
-  min-height: 500vh;
+  min-height: 100vh; /* make sure the height is at least 100% of the viewport height */
   width: 100%;
-  
 }
 
-/* Smooth scrolling */
+/* smooth scrolling */
 body, html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -18,7 +17,19 @@ body, html {
 }
 
 .section {
-  height: 150vh; /* ensures each section takes up the full viewport height */
+  margin-top: 60px; /* offset sections by the height of the navbar */
+  height: calc(100vh - 60px); /* ensures each section takes up the full viewport height minus the navbar */
   display: flex;
+  flex-direction: column; /* column layout for better responsiveness */
   width: 100%; /* ensures it does not exceed the viewport width */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    margin-top: 50px; /* offset sections by the new height of the navbar */
+    height: calc(100vh - 50px); /* adjust section height accordingly */
+  }
+}
+
+

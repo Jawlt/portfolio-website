@@ -45,7 +45,7 @@ function Home() {
   return (
     <div>
       <div className={`home-section ${isContactOpen ? 'blurred' : ''}`}>
-        <div className="description" id="bubble">
+        <div className="description">
           <h1>
             <ReactTyped
               strings={["Hey, I'm Jwalant"]}
@@ -78,7 +78,9 @@ function Home() {
           </h3>
         </div>
         <div className="picture-container">
-          <div className="picture-background"><img src="https://picsum.photos/400" alt="Random" /></div>
+          <div className="picture"><img src="https://picsum.photos/400" alt="Random" /></div>
+          <div className="picture-background-1"></div>
+          <div className="picture-background-2"></div>
         </div>
         <div className="button-container">
           <div className="resume">

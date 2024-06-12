@@ -5,10 +5,11 @@
 
 /* navbar styling */
 .navbar {
-  position: absolute; /* fixed navbar for when scrolling */
+  position: fixed; /* fixed instead of absolute to avoid scrolling issues */
   top: 0;
   left: 0; 
   width: 100%; 
+  height: 60px; /* specify the height of the navbar */
   background-color: #eee;
   padding: 1em; 
   z-index: 1000;
@@ -64,6 +65,10 @@
 
   .logo {
     margin-left: 2%; /* changed for smaller screens */
+  }
+
+  .navbar {
+    height: 50px; /* adjust navbar height for smaller screens */
   }
 
   .navbar-list {

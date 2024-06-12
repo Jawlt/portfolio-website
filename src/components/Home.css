@@ -1,50 +1,45 @@
 .home-section {
-    display: flex;
-    flex-direction: row; /* flex direction as row */
-    flex-wrap: wrap; /* allows wrapping */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    grid-template-rows: auto auto; /* adjust rows based on content */
     height: 100vh;
     width: 100%;
-    align-items: flex-start; /* aligns items to the start */
     text-align: center;
     justify-content: space-between;
-    padding: 2%; 
-    top: 12%;
-    left: 12%;
+    align-items: center;
+    margin: auto;
     position: relative;
+    left: 8%;
     transition: filter 0.3s ease;
 }
 
 .home-section.blurred {
-    filter: blur(5px); /* applys blur effect when contact form is open */
-}
-
-#bubble {
-    background-color: #eee;
-    padding: 2%; 
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 620px;
-    width: 100%;
+    filter: blur(5px); /* applies blur effect when contact form is open */
 }
 
 .description {
-    background-color: white;
-    padding: 2%; 
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-items: center;
+    background-color: #eee;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 620px;
-    width: 90%;
-    order: 1; /* ensures the description comes first */
+    max-width: 640px;
+    min-width: 280px;
+    width: 100%; 
+    padding: 4%;
 }
 
 .button-container {
-    position: absolute;
-    transform: translate(0%, 18em);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     display: flex;
-    gap: 2%; 
-    margin-top: 2%; 
+    gap: 2%;
     width: 100%; /* makes the button container take the full width */
-    order: 2; /* ensures the button container comes right after the description */
+    justify-content: flex-start; /* aligns buttons to the start */
+    align-self: baseline;
+    position: relative;
+    top: -32%;
 }
 
 .resume, .contact {
@@ -52,22 +47,20 @@
     padding: 1.5%;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 160px;
-    min-width: 160px;
-    width: auto;
+    max-width: 140px;
     flex: 1;
 }
 
 .resume {
     color: #DBE2EF;
     background-color: #3F72AF;
-    border: 2px solid #3F72AF; 
+    border: 2px solid #3F72AF;
 }
 
 .contact {
     color: #112D4E;
     background-color: #DBE2EF;
-    border: 2px solid #3F72AF; 
+    border: 2px solid #3F72AF;
 }
 
 .resume a, .contact a {
@@ -82,7 +75,7 @@
 }
 
 h1, h2, h3 {
-    margin: 1% 0; 
+    margin: 1% 0;
 }
 
 h1 {
@@ -116,7 +109,7 @@ h3 {
   
 .contact-form {
     background-color: white;
-    padding: 2%; 
+    padding: 2%;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -125,14 +118,14 @@ h3 {
 }
   
 .contact-form h2 {
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
 }
   
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 1%; 
-    margin: 1% 0; 
+    padding: 1%;
+    margin: 1% 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -145,11 +138,11 @@ h3 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
- }
+}
   
 .close-button {
-    margin-top: 2%; 
-    padding: 1% 2%; 
+    margin-top: 2%;
+    padding: 1% 2%;
     border: none;
     background-color: #ccc;
     color: white;
@@ -158,35 +151,48 @@ h3 {
 }
 
 .picture-container {
-    position: relative;
-    transform: translate(250%, -80%);
-    margin-right: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    position: relative; /* relative positioning to contain absolute children */
     display: flex;
-    width: 40vw; /* relative units for width */
-    height: 40vw; /* relative units for height to maintain aspect ratio */
     max-width: 400px;
-    max-height: 400px;
-    background-color: #DBE2EF;
-    border-radius: 30px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center;
-    order: 1; 
+    width: 100%;
+    left: 10%;
+    top: -5%
 }
 
-.picture-background img {
-    max-width: 100%;
-    height: 100%;
-    border-radius: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+.picture {
+    position: relative;
+    z-index: 3; /* ensure the image is on top */
 }
 
-.picture-background {
+.picture img {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* responsive width */
+    height: auto; /* responsive height */
+    z-index: 3;
+}
+
+.picture-background-1, .picture-background-2 {
     position: absolute;
-    top: 3%; 
-    right: 3%; 
-    width: 40vw; /* relative units for width */
-    height: 40vw; /*  relative units for height to maintain aspect ratio */
-    max-width: 400px;
-    max-height: 400px;
+    border-radius: 20px;
+    width: 100%; 
+    height: 100%; 
     z-index: 1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.picture-background-1 {
+    background-color: #F9F7F7; 
+    top: -3%; 
+    left: 3%; 
+    z-index: 2;
+}
+
+.picture-background-2 {
+    background-color: #DBE2EF; 
+    top: -6%; 
+    left: 6%; 
+    z-index: 1;
 }

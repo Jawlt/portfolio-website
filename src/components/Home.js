@@ -43,7 +43,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="home">
       <div className={`home-section ${isContactOpen ? 'blurred' : ''}`}>
         <div className="description">
           <h1>

@@ -1,3 +1,7 @@
+.home {
+    margin-top: 60px; /* navbar height offset */
+}
+
 .home-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* two equal columns */
@@ -20,14 +24,15 @@
 .description {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    align-items: center;
     background-color: #eee;
+    text-align: center;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 640px;
-    min-width: 280px;
+    max-width: 700px;
+    min-width: 320px;
     width: 100%; 
     padding: 4%;
+    padding-top: 2%;
 }
 
 .button-container {
@@ -79,18 +84,18 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: #000;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5rem;
     color: #3F72AF;
 }
 
 h3 {
     color: #000;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* Contact Popup */
@@ -157,7 +162,7 @@ h3 {
     display: flex;
     max-width: 400px;
     width: 100%;
-    left: 10%;
+    left: 8%;
     top: -5%
 }
 

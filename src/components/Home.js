@@ -84,12 +84,12 @@ function Home() {
         </div>
         <div className="button-container">
           <div className="resume">
-            <a href="#resume" onClick={onResumeClick}>
+            <a onClick={onResumeClick}>
               <p><i className="far fa-file-alt"></i> Resume</p>
             </a>
           </div>
           <div className="contact">
-            <a href="#contact" onClick={onContactClick}>
+            <a onClick={onContactClick}>
               <p><i className="far fa-envelope"></i> Contact</p>
             </a>
           </div>

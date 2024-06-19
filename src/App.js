@@ -6,18 +6,18 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Element } from 'react-scroll';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   useEffect(() => {
     const light = document.querySelector(".light");
-    
+
     const handleMouseMove = (e) => {
       if (light) {
-        light.style.left = `${e.clientX}px`;
-        light.style.top = `${e.clientY}px`;
+        light.style.left = `${e.clientX + window.scrollX}px`;
+        light.style.top = `${e.clientY + window.scrollY}px`;
       }
     };
 
@@ -29,14 +29,13 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div>  
       <div className="container">
         <header id="hex-grid">
           <div className="light"></div>
-          <div className="grid"> </div>
+          <div className="grid"></div>
         </header>
       </div>
-    
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />

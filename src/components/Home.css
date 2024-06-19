@@ -24,10 +24,10 @@
 .description {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background-color: #eee;
+    background: #F9F7F7;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.11);
     max-width: 700px;
     min-width: 320px;
     width: 100%; 

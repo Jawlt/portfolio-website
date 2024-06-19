@@ -83,15 +83,15 @@ function Home() {
           <div className="picture-background-2"></div>
         </div>
         <div className="button-container">
-          <div className="resume">
-            <a onClick={onResumeClick}>
+          <div>
+            <button className="resume" onClick={onResumeClick}>
               <p><i className="far fa-file-alt"></i> Resume</p>
-            </a>
+            </button>
           </div>
-          <div className="contact">
-            <a onClick={onContactClick}>
+          <div>
+            <button className="contact" onClick={onContactClick}>
               <p><i className="far fa-envelope"></i> Contact</p>
-            </a>
+            </button>
           </div>
         </div>
       </div>

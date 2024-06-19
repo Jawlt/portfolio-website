@@ -47,37 +47,67 @@
     top: -32%;
 }
 
-.resume, .contact {
+.button-container .resume, .contact {
     font-size: 1em;
-    padding: 1.5%;
+    padding: 8%;
     border-radius: 20px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 140px;
-    flex: 1;
+    min-width: 140px;
     cursor: pointer;
 }
 
-.resume {
+.button-container .resume {
     color: #DBE2EF;
     background-color: #3F72AF;
     border: 2px solid #3F72AF;
 }
 
-.contact {
+.button-container .contact {
     color: #112D4E;
     background-color: #DBE2EF;
     border: 2px solid #3F72AF;
 }
 
-.resume a, .contact a {
+.button-container .resume a, .contact a {
     color: inherit;
     text-decoration: none;
 }
 
-.resume p, .contact p {
+.button-container .resume p, .contact p {
     margin: 0;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    .button-container .resume, .contact {
+        width: 80%;
+        padding: 4%; 
+        font-size: 0.9em; 
+    }
+
+    .button-container .resume p, .contact p {
+        font-size: 1em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container .resume, .contact {
+        width: 100%;
+        padding: 3%; 
+        font-size: 0.8em; 
+    }
+
+    .button-container .resume p, .contact p {
+        font-size: 0.9em; 
+    }
 }
 
 h1, h2, h3 {

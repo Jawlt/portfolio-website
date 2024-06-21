@@ -83,16 +83,14 @@ function Home() {
           <div className="picture-background-2"></div>
         </div>
         <div className="button-container">
-          <div>
-            <button className="resume" onClick={onResumeClick}>
-              <p><i className="far fa-file-alt"></i> Resume</p>
-            </button>
-          </div>
-          <div>
-            <button className="contact" onClick={onContactClick}>
-              <p><i className="far fa-envelope"></i> Contact</p>
-            </button>
-          </div>
+          <button className="resume" onClick={onResumeClick}>
+            <p><i className="far fa-file-alt"></i> Resume</p>
+          </button>
+          <button className="contact" onClick={onContactClick}>
+            <p><i className="far fa-envelope"></i> Contact</p>
+          </button>
+          <a href="https://linkedin.com/in/jwalant-p" className="linkden" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin" ></i></a>
+          <a href="https://github.com/Jawlt" className="github" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
         </div>
       </div>
       {isContactOpen && (
@@ -100,7 +98,6 @@ function Home() {
           <div className="contact-form">
             <h2>Contact Me</h2>
             <form onSubmit={sendEmail}>
-              <input type="text" name="from_name" id="fromName" placeholder="Name" required />
               <input type="email" name="email_from" id="emailFrom" placeholder="Email person@example.com" required />
               <textarea name="message" id="message" placeholder="Message" required></textarea>
               <button type="submit">Send <i className="far fa-paper-plane"></i></button>

@@ -36,25 +36,29 @@
 }
 
 .button-container {
+    position: relative;
+    top: -36%;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    display: flex;
     gap: 2%;
     width: 100%; /* makes the button container take the full width */
+    display: flex;
     justify-content: flex-start; /* aligns buttons to the start */
     align-self: baseline;
-    position: relative;
-    top: -32%;
+    align-items: center;    
 }
 
 .button-container .resume, .contact {
-    font-size: 1em;
-    padding: 8%;
+    font-size: 100%;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 140px;
     cursor: pointer;
+    height: 40px;
+    width: 140px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex; /* Ensure the content is centered */
+    align-items: center;
+    justify-content: center;
 }
 
 .button-container .resume {
@@ -76,8 +80,25 @@
 
 .button-container .resume p, .contact p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
+}
+
+.button-container .github, .linkden {
+    font-size: 1.5em;
+    color: #112D4E;
+    background-color: #DBE2EF;
+    border: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
 }
 
 @media (max-width: 768px) {
@@ -89,8 +110,7 @@
 
     .button-container .resume, .contact {
         width: 80%;
-        padding: 4%; 
-        font-size: 0.9em; 
+        font-size: 1em; 
     }
 
     .button-container .resume p, .contact p {
@@ -101,12 +121,11 @@
 @media (max-width: 480px) {
     .button-container .resume, .contact {
         width: 100%;
-        padding: 3%; 
-        font-size: 0.8em; 
+        font-size: 1em; 
     }
 
     .button-container .resume p, .contact p {
-        font-size: 0.9em; 
+        font-size: 1em; 
     }
 }
 

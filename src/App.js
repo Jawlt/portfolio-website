@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Home from './components/Home';
-import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import { Helmet } from "react-helmet";
 import { Element } from 'react-scroll';

@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Pdf from './files/Resume.pdf';
 import './Home.css';
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import emailjs from '@emailjs/browser';
+import profilePicture1 from './files/profile_picture1.png';
+import profilePicture2 from './files/profile_picture2.png';
+import profilePicture3 from './files/profile_picture3.png';
 
-function Home() {
+export function Home() {
   const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const emailJsServiceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const emailJsTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [profilePicture1, profilePicture2, profilePicture3]; // add more later
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 5000); // image changes interval
+
+    return () => clearInterval(interval); 
+  }, [images.length]);
 
   const onResumeClick = () => {
     window.open(Pdf);
@@ -78,7 +92,9 @@ function Home() {
           </h3>
         </div>
         <div className="picture-container">
-          <div className="picture"><img src="https://picsum.photos/400" alt="Random" /></div>
+          <div className="picture">
+            <img src={images[currentImageIndex]} alt="Profile" />
+          </div>
           <div className="picture-background-1"></div>
           <div className="picture-background-2"></div>
         </div>

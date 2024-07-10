@@ -2,7 +2,7 @@
 .container {
   position: absolute;
   width: 100%;
-  height: 500vh;
+  height: 250vh;
   z-index: 1; /* Ensure this is behind the .App */
 }
 
@@ -64,7 +64,7 @@ body, html {
 }
 
 #projects {
-  height: 100vh;
+  height: 150vh;
 }
 
 /* Responsive adjustments */

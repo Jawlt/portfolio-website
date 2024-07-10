@@ -24,15 +24,6 @@ function Navbar() {
         <li className="navbar-item">
           <Link to="projects" smooth={true} duration={1} onClick={toggleMenu}>Projects</Link>
         </li>
-        <li className="navbar-item">
-          <Link to="skills" smooth={true} duration={1} onClick={toggleMenu}>Skills</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="about" smooth={true} duration={1} onClick={toggleMenu}>About</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="contact" smooth={true} duration={1} onClick={toggleMenu}>Contact</Link>
-        </li>
       </ul>
     </nav>
   );

@@ -199,6 +199,8 @@ h3 {
     position: relative; /* relative positioning to contain absolute children */
     display: flex;
     max-width: 400px;
+    max-height: 400px;
+    height: 100%;
     width: 100%;
     left: 8%;
     top: -5%
@@ -211,9 +213,10 @@ h3 {
 
 .picture img {
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 100%; /* responsive width */
-    height: auto; /* responsive height */
+    height: 100%; /* responsive height */
+    object-fit: cover;
     z-index: 3;
 }
 
@@ -223,7 +226,7 @@ h3 {
     width: 100%; 
     height: 100%; 
     z-index: 1; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .picture-background-1 {

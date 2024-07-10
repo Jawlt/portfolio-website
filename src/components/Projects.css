@@ -31,7 +31,11 @@
 }
 
 .project-card.expanded {
-  transform: scale(1.1);
+  transform: scale(1);
+}
+
+.project-card.scaled-down {
+  transform: scale(0.5);
 }
 
 .project-image {
@@ -41,6 +45,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: bottom;
   filter: blur(0px);
   transition: filter 0.3s;
   z-index: 0; 
@@ -58,7 +63,7 @@
 
 .project-title {
   font-size: 1.5em;
-  color: #112D4E;
+  text-shadow: 0 0 3px #F9F7F7, 0 0 3px #F9F7F7;
   margin: 10px 0;
 }
 

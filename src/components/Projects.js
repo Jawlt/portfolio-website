@@ -1,36 +1,40 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import minesweeperImage from './files/minesweeper finish.png'; // Update the path as per your structure
+import spellCheckerImage from './files/spellchecker dark.png'; // Add the other images similarly
+import spotifyImage from './files/spotify playlist merger.png';
+import greenhouseImage from './files/mini greenhouse 0.jpg';
 
 const projects = [
   {
     title: "Minesweeper Game",
-    image: "https://via.placeholder.com/400",
+    image: minesweeperImage,
     description: "This is a brief description of Project 1."
   },
   {
-    title: "Proof Reading App",
-    image: "https://via.placeholder.com/500",
+    title: "SpellChecker App",
+    image: spellCheckerImage,
     description: "This is a brief description of Project 2."
   },
   {
     title: "Spotify Guest Playlist Merger",
-    image: "https://via.placeholder.com/300",
+    image: spotifyImage,
     description: "This is a brief description of Project 3."
   },
   {
     title: "Mini Greenhouse",
-    image: "https://via.placeholder.com/400",
+    image: greenhouseImage,
     description: "This is a brief description of Project 4."
   },
   {
     title: "TO BE ADDED",
     image: "https://picsum.photos/400",
-    description: "This is a brief description of Project 3."
+    description: "This is a brief description of Project 5."
   },
   {
     title: "TO BE ADDED",
     image: "https://picsum.photos/300",
-    description: "This is a brief description of Project 4."
+    description: "This is a brief description of Project 6."
   },
 ];
 
@@ -48,12 +52,15 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`project-card ${expandedCard === index ? 'expanded' : ''}`}
+            className={`project-card ${expandedCard === index ? 'expanded' : expandedCard !== null ? 'scaled-down' : ''}`}
             onClick={() => handleCardClick(index)}
           >
             <img src={project.image} alt={project.title} className="project-image" />
             <div className="project-content">
               <h2 className="project-title">{project.title}</h2>
+              {expandedCard === index && (
+                <p className="project-description">{project.description}</p>
+              )}
             </div>
           </div>
         ))}

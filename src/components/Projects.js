@@ -13,7 +13,6 @@ import cssIcon from './files/icons/css.svg';
 import htmlIcon from './files/icons/html.svg';
 import javaIcon from './files/icons/java.svg';
 import javascriptIcon from './files/icons/javascript.svg';
-import pythonIcon from './files/icons/python.svg';
 import qtIcon from './files/icons/qt.svg';
 import reactIcon from './files/icons/react.svg';
 

@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6b233f7.css",
-    "main.js": "/static/js/main.2dd6803c.js",
+    "main.css": "/static/css/main.35e8b673.css",
+    "main.js": "/static/js/main.5db9fc9d.js",
     "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
+    "static/media/profile_picture3.png": "/static/media/profile_picture3.3f6b729050459e8f11a0.png",
     "static/media/mini greenhouse 0.jpg": "/static/media/mini greenhouse 0.a20521fce4a87966f43f.jpg",
+    "static/media/profile_picture1.png": "/static/media/profile_picture1.5b5dc63035780f24efaa.png",
+    "static/media/profile_picture2.png": "/static/media/profile_picture2.7c114806c6bca8e3e4de.png",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/portfolio website.png": "/static/media/portfolio website.6180929b9c98eb2db907.png",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
     "static/media/Resume.pdf": "/static/media/Resume.cefb666264baddd0cc85.pdf",
     "static/media/spotify playlist merger.png": "/static/media/spotify playlist merger.51f1abf33e6f185ab050.png",
@@ -18,13 +22,21 @@
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/grid.svg": "/static/media/grid.2a0df4cf6dd72574e4c0.svg",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
+    "static/media/arduino.svg": "/static/media/arduino.afb8ab21b41f7796ac703b8b23d32e97.svg",
+    "static/media/java.svg": "/static/media/java.a351f739f47fda7a637b86ffa530d56a.svg",
+    "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/c++.svg": "/static/media/c++.a776a608546a79750b150829bc9b099e.svg",
+    "static/media/qt.svg": "/static/media/qt.3448df0eb7a0903fa858a7012afd7ca2.svg",
     "index.html": "/index.html",
-    "main.f6b233f7.css.map": "/static/css/main.f6b233f7.css.map",
-    "main.2dd6803c.js.map": "/static/js/main.2dd6803c.js.map",
+    "static/media/css.svg": "/static/media/css.4e47c3122b8d2476a02f97dcfcb28640.svg",
+    "static/media/html.svg": "/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
+    "static/media/javascript.svg": "/static/media/javascript.b879f838faf1cb951d1c2230fd933a39.svg",
+    "main.35e8b673.css.map": "/static/css/main.35e8b673.css.map",
+    "main.5db9fc9d.js.map": "/static/js/main.5db9fc9d.js.map",
     "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6b233f7.css",
-    "static/js/main.2dd6803c.js"
+    "static/css/main.35e8b673.css",
+    "static/js/main.5db9fc9d.js"
   ]
 }

@@ -47,7 +47,7 @@ function App() {
         <Element name="home" className="section">
           <Home />
         </Element>
-        <Element name="projects" className="section">
+        <Element name="projects" className="section" id="projects">
           <Projects />
         </Element>
         <Element name="skills" className="section">

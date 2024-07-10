@@ -63,6 +63,10 @@ body, html {
   width: 100%; /* ensures it does not exceed the viewport width */
 }
 
+#projects {
+  height: 200vh;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .section {

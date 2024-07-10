@@ -55,6 +55,7 @@
 
 .navbar-item a:hover {
   background-color: #DBE2EF; /* changes hover background color on navbar items */
+  cursor: pointer;
 }
 
 /* responsive design for smaller screens */

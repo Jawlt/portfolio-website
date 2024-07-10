@@ -97,25 +97,6 @@
     transform: scale(1.15); /* Increase size by 2% */
 }
 
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: row;
-        align-items: center;
-        margin-top: 2%;
-    }
-
-    .button-container .resume, .contact {
-        width: 80%;
-        font-size: 1em; 
-    }
-}
-
-@media (max-width: 480px) {
-    .button-container .resume, .contact {
-        width: 100%;
-        font-size: 1em; 
-    }
-}
 
 h1, h2, h3 {
     margin: 1% 0;

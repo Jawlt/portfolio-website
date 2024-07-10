@@ -92,3 +92,22 @@ body, html {
 ::-webkit-scrollbar-track {
   background: #F9F7F7; /* Color of the scrollbar track */
 }
+
+/* media query to hide content on small screens */
+@media (max-width: 1080px) {
+  .container, .App {
+    display: none;
+  }
+}
+
+/* style for the small screen message */
+.small-screen-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  color: #3F72AF;
+}

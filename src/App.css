@@ -24,8 +24,8 @@
 
 #hex-grid .light {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50px;
+  left: 50px;
   transform: translate(-50%, -50%);
   width: 20em;
   height: 20em;
@@ -35,7 +35,6 @@
   z-index: 0;
   pointer-events: none; /* Ensure it doesn't capture mouse events */
 }
-
 
 .App {
   position: relative;
@@ -65,6 +64,9 @@ body, html {
   width: 100%; /* ensures it does not exceed the viewport width */
 }
 
+#footer {
+  height: 2vh;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -110,4 +112,3 @@ body, html {
   padding: 20px;
   color: #3F72AF;
 }
-

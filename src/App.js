@@ -3,7 +3,6 @@ import './App.css';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { Helmet } from "react-helmet";
 import { Element } from 'react-scroll';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -63,10 +62,10 @@ function App() {
             <Element name="projects" className="section" id="projects">
               <Projects />
             </Element>
-            <Footer />
           </div>
         </div>
       )}
+      
     </div>
   );
 }

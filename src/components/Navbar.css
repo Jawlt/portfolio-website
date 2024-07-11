@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between; /* distributes space between logo and navbar items */
   align-items: center; /* center align items vertically */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 /* logo styling */

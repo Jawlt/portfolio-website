@@ -113,3 +113,13 @@
   height: 40px;
   object-fit: contain;
 }
+
+.footer {
+  position: absolute;
+  background-color: #F9F7F7;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

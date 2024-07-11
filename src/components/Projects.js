@@ -113,7 +113,9 @@ function Projects() {
           </div>
         ))}
       </div>
+      <div className="footer"><p>© 2024 Jwalant Patel. All rights reserved.</p></div>
     </div>
+    
   );
 }
 

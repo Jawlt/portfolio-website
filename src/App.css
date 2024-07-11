@@ -2,7 +2,7 @@
 .container {
   position: absolute;
   width: 100%;
-  height: 250vh;
+  height: 200vh;
   z-index: 1; /* Ensure this is behind the .App */
 }
 
@@ -33,7 +33,9 @@
   filter: blur(15px);
   background: linear-gradient(90deg, #3F72AF 0%, #DBE2EF 100%);
   z-index: 0;
+  pointer-events: none; /* Ensure it doesn't capture mouse events */
 }
+
 
 .App {
   position: relative;
@@ -63,9 +65,6 @@ body, html {
   width: 100%; /* ensures it does not exceed the viewport width */
 }
 
-#projects {
-  height: 150vh;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -111,3 +110,4 @@ body, html {
   padding: 20px;
   color: #3F72AF;
 }
+

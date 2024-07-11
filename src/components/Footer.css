@@ -1,0 +1,10 @@
+  .footer {
+    color: #112D4E;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #f1f1f1; /* Add background color if needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+    position: relative;
+  }
+  

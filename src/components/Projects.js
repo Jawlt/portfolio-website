@@ -92,7 +92,7 @@ function Projects() {
           <div
             key={index}
             ref={el => cardRefs.current[index] = el}
-            className={`project-card ${expandedCard === index ? 'expanded' : expandedCard !== null ? 'scaled-down' : ''}`}
+            className={`project-card ${expandedCard === index ? 'expanded' : ''}`}
             onClick={() => handleCardClick(index)}
           >
             <img src={project.image} alt={project.title} className="project-image" />

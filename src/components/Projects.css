@@ -11,20 +11,21 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
   justify-items: center;
-  row-gap: 40px;
 }
 
 .project-card {
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  height: 10vw;
-  width: 40vw;
+  height: 200px;
+  width: 100%;
+  max-width: 500px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, height 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,20 +33,12 @@
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Increase size by 2% */
+  transform: scale(1.05);
   box-shadow: 0 0 10px 5px rgba(63, 114, 175, 0.5);
 }
 
 .project-card.expanded {
-  transform: scale(1);
-  height: 30vw;
-  transition: 0.5s;
-}
-
-.project-card.scaled-down {
-  transform: scale(0.9);
-  opacity: 80%;
-  transition: 0.5s;
+  height: 450px;
 }
 
 .project-image {
@@ -58,7 +51,7 @@
   object-position: center;
   filter: blur(2px);
   transition: filter 0.3s;
-  z-index: 0; 
+  z-index: 0;
 }
 
 .project-card.expanded .project-image {
@@ -84,13 +77,13 @@
 
 .project-description {
   background-color: rgba(249, 247, 247, 0.9);
-  width: 30vw;
+  width: 90%;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   font-size: 1em;
   color: #3F72AF;
   padding: 20px;
-  margin-bottom: 10px; /* Add space between description and the github link */
+  margin-top: 10px; 
 }
 
 .github {
@@ -106,7 +99,8 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  transition: transform 0.1s ease; /* smooth transition */
+  margin-top: 10px;
+  transition: transform 0.1s ease;
 }
 
 .skills-icons {

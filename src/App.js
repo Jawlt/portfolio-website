@@ -3,12 +3,18 @@ import './App.css';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { Helmet } from "react-helmet";
 import { Element } from 'react-scroll';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  const handleScroll = () => {
+    setIsFooterVisible(window.scrollY > window.innerHeight / 2);
+  };
 
   useEffect(() => {
     const light = document.querySelector(".light");
@@ -26,11 +32,15 @@ function App() {
 
     document.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
-    handleResize(); // Check initial screen size
+    window.addEventListener('scroll', handleScroll);
+
+    handleResize(); // check initial screen size
+    handleScroll(); // check initial scroll position
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -62,10 +72,10 @@ function App() {
             <Element name="projects" className="section" id="projects">
               <Projects />
             </Element>
+            <Footer className={isFooterVisible ? 'visible' : ''} />
           </div>
         </div>
       )}
-      
     </div>
   );
 }

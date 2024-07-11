@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #F9F7F7;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    transition: transform 0.1s;
+    transform: translateY(100%); /* hide footer initially */
+    z-index: 9;
+  }
+
+  .footer.visible {
+    transform: translateY(0); /* show footer when visible */
+  }
+  

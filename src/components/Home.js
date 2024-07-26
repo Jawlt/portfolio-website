@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import profilePicture1 from './files/profile_picture1.png';
 import profilePicture2 from './files/profile_picture2.png';
 import profilePicture3 from './files/profile_picture3.png';
+import profilePicture4 from './files/profile_picture4.png';
 
 export function Home() {
   const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -15,7 +16,7 @@ export function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [profilePicture1, profilePicture2, profilePicture3]; // add more later
+  const images = [profilePicture1, profilePicture2, profilePicture3, profilePicture4]; // add more later
 
   useEffect(() => {
     const interval = setInterval(() => {

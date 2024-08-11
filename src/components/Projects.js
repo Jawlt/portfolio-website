@@ -5,6 +5,7 @@ import spellCheckerImage from './files/spellchecker dark.png';
 import spotifyImage from './files/spotify playlist merger.png';
 import greenhouseImage from './files/mini greenhouse 0.jpg';
 import portfolioWebsiteImage from './files/portfolio website.png';
+import simonGamePicture from './files/simon game.png';
 import tempPicture from './files/temp picture.png';
 
 import arduinoIcon from './files/icons/arduino.svg';
@@ -13,6 +14,7 @@ import cssIcon from './files/icons/css.svg';
 import htmlIcon from './files/icons/html.svg';
 import javaIcon from './files/icons/java.svg';
 import javascriptIcon from './files/icons/javascript.svg';
+import jQueryIcon from './files/icons/jquery.svg'
 import qtIcon from './files/icons/qt.svg';
 import reactIcon from './files/icons/react.svg';
 
@@ -66,6 +68,32 @@ const projects = [
       { name: "JavaScript", icon: javascriptIcon },
       { name: "React", icon: reactIcon }
     ]
+  },
+  {
+    title: "Simon Game",
+    image: simonGamePicture,
+    description: "This mini project was created as a fun introduction to the jQuery JavaScript library.",
+    github: "https://github.com/Jawlt/simon-game",
+    skills: [
+      { name: "HTML", icon: htmlIcon},
+      { name: "CSS", icon: cssIcon},
+      { name: "JavaScript", icon: javascriptIcon},
+      { name: "jQuery" , icon: jQueryIcon}
+    ]
+  },
+  {
+    title: "TO BE ADDED",
+    image: tempPicture,
+    description: "This is project is still being developed.",
+    github: "https://github.com/Jawlt",
+    skills: []
+  },
+  {
+    title: "TO BE ADDED",
+    image: tempPicture,
+    description: "This is project is still being developed.",
+    github: "https://github.com/Jawlt",
+    skills: []
   },
   {
     title: "TO BE ADDED",

@@ -72,8 +72,8 @@ export function Home() {
             <ReactTyped
               strings={[
                 "Computer Science Student",
-                "Aspiring Developer",
-                "Designer",
+                "Software Engineer",
+                "Developer",
               ]}
               typeSpeed={50}
               loop

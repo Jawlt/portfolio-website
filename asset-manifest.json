@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ea87aefa.css",
-    "main.js": "/static/js/main.6ec3306e.js",
+    "main.js": "/static/js/main.e8291565.js",
     "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
     "static/media/profile_picture4.png": "/static/media/profile_picture4.3f6b729050459e8f11a0.png",
     "static/media/mini greenhouse 0.jpg": "/static/media/mini greenhouse 0.a20521fce4a87966f43f.jpg",
@@ -20,10 +20,12 @@
     "static/media/spellchecker dark.png": "/static/media/spellchecker dark.196047a68c9f56eb0dd0.png",
     "static/media/temp picture.png": "/static/media/temp picture.c0dff7bbc9b0cc973a47.png",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.21cb8f55d8e0c5b89751.woff2",
+    "static/media/simon game.png": "/static/media/simon game.fdefdff55315d6da671d.png",
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/grid.svg": "/static/media/grid.2a0df4cf6dd72574e4c0.svg",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "static/media/arduino.svg": "/static/media/arduino.afb8ab21b41f7796ac703b8b23d32e97.svg",
+    "static/media/jquery.svg": "/static/media/jquery.fcc480227fd31fecc887db807010bf1d.svg",
     "static/media/java.svg": "/static/media/java.a351f739f47fda7a637b86ffa530d56a.svg",
     "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
     "static/media/c++.svg": "/static/media/c++.a776a608546a79750b150829bc9b099e.svg",
@@ -33,11 +35,11 @@
     "static/media/html.svg": "/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/javascript.svg": "/static/media/javascript.b879f838faf1cb951d1c2230fd933a39.svg",
     "main.ea87aefa.css.map": "/static/css/main.ea87aefa.css.map",
-    "main.6ec3306e.js.map": "/static/js/main.6ec3306e.js.map",
+    "main.e8291565.js.map": "/static/js/main.e8291565.js.map",
     "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea87aefa.css",
-    "static/js/main.6ec3306e.js"
+    "static/js/main.e8291565.js"
   ]
 }

@@ -105,7 +105,7 @@ const projects = [
     title: "WatchVault",
     image: watchVaultPicture,
     description: "Solo project where I developed WatchVault, a website for users to track and organize movies, TV shows, and anime, with dynamic data retrieval via APIs, poster storage in AWS S3, and record-keeping in MongoDB.",
-    github: "https://github.com/Jawlt",
+    github: "https://github.com/Jawlt/WatchVault",
     skills: [
       { name: "HTML", icon: htmlIcon},
       { name: "CSS", icon: cssIcon},

@@ -6,6 +6,8 @@ import spotifyImage from './files/spotify playlist merger.png';
 import greenhouseImage from './files/mini greenhouse 0.jpg';
 import portfolioWebsiteImage from './files/portfolio website.png';
 import simonGamePicture from './files/simon game.png';
+import toDoListPicture from './files/todolist.png';
+import watchVaultPicture from './files/watchvault.png';
 import tempPicture from './files/temp picture.png';
 
 import arduinoIcon from './files/icons/arduino.svg';
@@ -14,9 +16,13 @@ import cssIcon from './files/icons/css.svg';
 import htmlIcon from './files/icons/html.svg';
 import javaIcon from './files/icons/java.svg';
 import javascriptIcon from './files/icons/javascript.svg';
+import nodejsIcon from './files/icons/nodejs.svg'
+import expressjsIcon from './files/icons/expressjs.svg'
 import jQueryIcon from './files/icons/jquery.svg'
 import qtIcon from './files/icons/qt.svg';
 import reactIcon from './files/icons/react.svg';
+import mongodbIcon from './files/icons/mongodb.svg';
+import awss3Icon from './files/icons/aws s3.svg';
 
 const projects = [
   {
@@ -78,22 +84,38 @@ const projects = [
       { name: "HTML", icon: htmlIcon},
       { name: "CSS", icon: cssIcon},
       { name: "JavaScript", icon: javascriptIcon},
-      { name: "jQuery" , icon: jQueryIcon}
+      { name: "jQuery", icon: jQueryIcon}
     ]
   },
   {
-    title: "TO BE ADDED",
-    image: tempPicture,
-    description: "This is project is still being developed.",
-    github: "https://github.com/Jawlt",
-    skills: []
+    title: "ToDo List",
+    image: toDoListPicture,
+    description: "Mini solo project where I developed a functional day-to-day ToDo List, where the user can have tasks for general purposes or university tasks.",
+    github: "https://github.com/Jawlt/ToDoList",
+    skills: [
+      { name: "HTML", icon: htmlIcon},
+      { name: "CSS", icon: cssIcon},
+      { name: "JavaScript", icon: javascriptIcon},
+      { name: "jQuery", icon: jQueryIcon},
+      { name: "Node.js", icon: nodejsIcon},
+      { name: "Express.js", icon: expressjsIcon}
+    ]
   },
   {
-    title: "TO BE ADDED",
-    image: tempPicture,
-    description: "This is project is still being developed.",
+    title: "WatchVault",
+    image: watchVaultPicture,
+    description: "Solo project where I developed WatchVault, a website for users to track and organize movies, TV shows, and anime, with dynamic data retrieval via APIs, poster storage in AWS S3, and record-keeping in MongoDB.",
     github: "https://github.com/Jawlt",
-    skills: []
+    skills: [
+      { name: "HTML", icon: htmlIcon},
+      { name: "CSS", icon: cssIcon},
+      { name: "JavaScript", icon: javascriptIcon},
+      { name: "jQuery", icon: jQueryIcon},
+      { name: "Node.js", icon: nodejsIcon},
+      { name: "Express.js", icon: expressjsIcon},
+      { name: "MongoDB", icon: mongodbIcon},
+      { name: "AWS S3", icon: awss3Icon}
+    ]
   },
   {
     title: "TO BE ADDED",

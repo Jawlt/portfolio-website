@@ -40,7 +40,7 @@
   position: relative;
   z-index: 2;
   background: transparent;
-  min-height: 100vh; /* make sure the height is at least 100% of the viewport height */
+  min-height: 100%; /* make sure the height is at least 100% of the viewport height */
   width: 100%;
 }
 

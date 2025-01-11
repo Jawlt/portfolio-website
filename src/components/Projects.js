@@ -38,7 +38,7 @@ import auth0Icon from './files/icons/auth0.svg';
 import csharpIcon from './files/icons/csharp.svg';
 import unityIcon from './files/icons/unity.svg';
 
-// ✅ Image and Skill Icon Mappings Fixed
+// Image and Skill Icon Mappings Fixed
 const projectImages = {
     "minesweeperImage": minesweeperImage,
     "spellCheckerImage": spellCheckerImage,
@@ -77,7 +77,6 @@ const skillIcons = {
     "Unity": unityIcon
 };
 
-// ✅ Fixed Projects Component Definition
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [expandedCard, setExpandedCard] = useState(null);

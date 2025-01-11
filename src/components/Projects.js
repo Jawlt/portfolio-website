@@ -26,9 +26,9 @@ import htmlIcon from './files/icons/html.svg';
 import javaIcon from './files/icons/java.svg';
 import javascriptIcon from './files/icons/javascript.svg';
 import typescriptIcon from './files/icons/typescript.svg';
-import nodejsIcon from './files/icons/nodejs.svg'
-import expressjsIcon from './files/icons/expressjs.svg'
-import jQueryIcon from './files/icons/jquery.svg'
+import nodejsIcon from './files/icons/nodejs.svg';
+import expressjsIcon from './files/icons/expressjs.svg';
+import jQueryIcon from './files/icons/jquery.svg';
 import qtIcon from './files/icons/qt.svg';
 import reactIcon from './files/icons/react.svg';
 import mongodbIcon from './files/icons/mongodb.svg';
@@ -38,7 +38,7 @@ import auth0Icon from './files/icons/auth0.svg';
 import csharpIcon from './files/icons/csharp.svg';
 import unityIcon from './files/icons/unity.svg';
 
-// Image and Skill Icon Mappings
+// ✅ Image and Skill Icon Mappings Fixed
 const projectImages = {
     "minesweeperImage": minesweeperImage,
     "spellCheckerImage": spellCheckerImage,
@@ -48,6 +48,10 @@ const projectImages = {
     "simonGamePicture": simonGamePicture,
     "toDoListPicture": toDoListPicture,
     "watchVaultPicture": watchVaultPicture,
+    "codingMonkeyPicture": codingMonkeyPicture,
+    "adventureGamePicture": adventureGamePicture,
+    "fpsDartTagPicture": fpsDartTagPicture,
+    "localizationToolPicture": localizationToolPicture,
     "tempPicture": tempPicture
 };
 
@@ -64,9 +68,16 @@ const skillIcons = {
     "Qt": qtIcon,
     "React": reactIcon,
     "MongoDB": mongodbIcon,
-    "AWS S3": awss3Icon
+    "AWS S3": awss3Icon,
+    "Python": pythonIcon,
+    "Tailwind CSS": tailwindcssIcon,
+    "TypeScript": typescriptIcon,
+    "Auth0": auth0Icon,
+    "C#": csharpIcon,
+    "Unity": unityIcon
 };
 
+// ✅ Fixed Projects Component Definition
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [expandedCard, setExpandedCard] = useState(null);
@@ -76,7 +87,10 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get(backendAPI + "/api/projects");
+                if (!backendAPI) {
+                    console.error("Error: Backend API URL is not defined in .env");
+                }
+                const response = await axios.get(`${backendAPI}/api/projects`);
                 setProjects(response.data);
                 console.log('Projects Fetched:', response.data);
             } catch (error) {
@@ -85,174 +99,7 @@ const Projects = () => {
         };
 
         fetchProjects();
-    }, []);
-const projects = [
-  {
-    title: "WatchVault",
-    image: watchVaultPicture,
-    description: "Solo project where I developed WatchVault, a website for users to track and organize movies, TV shows, and anime, with dynamic data retrieval via APIs, poster storage in AWS S3, and record-keeping in MongoDB.",
-    github: "https://github.com/Jawlt/WatchVault",
-    skills: [
-      { name: "HTML", icon: htmlIcon },
-      { name: "CSS", icon: cssIcon },
-      { name: "JavaScript", icon: javascriptIcon },
-      { name: "jQuery", icon: jQueryIcon },
-      { name: "Node.js", icon: nodejsIcon },
-      { name: "Express.js", icon: expressjsIcon },
-      { name: "MongoDB", icon: mongodbIcon },
-      { name: "AWS S3", icon: awss3Icon }
-    ]
-  },
-  {
-    title: "CodingMonkey",
-    image: codingMonkeyPicture,
-    description: "CodingMonkey gamifies practice with timed challenges, helping users build muscle memory, master syntax, and improve skills while competing on leaderboards.",
-    github: "https://github.com/Jawlt/WesternHackGroup",
-    skills: [
-      { name: "HTML", icon: htmlIcon },
-      { name: "Tailwind CSS", icon: tailwindcssIcon },
-      { name: "TypeScript", icon: typescriptIcon },
-      { name: "React", icon: reactIcon },
-      { name: "Node.js", icon: nodejsIcon },
-      { name: "Express.js", icon: expressjsIcon },
-      { name: "MongoDB", icon: mongodbIcon },
-      { name: "Auth0", icon: auth0Icon }
-    ]
-  },
-  {
-    title: "2D Adventure Game",
-    image: adventureGamePicture,
-    description: "A challenging 2D adventure game where players collect and solve puzzles to progress through stages, culminating in a skill-testing boss fight with limited health, dash-based invincibility, and Souls-like mechanics.",
-    github: "https://github.com/Jawlt/2DAdventureGame",
-    skills: [
-      { name: "Unity", icon: unityIcon },
-      { name: "C#", icon: csharpIcon }
-    ]
-  },
-  {
-    title: "FPS Dart Tag",
-    image: fpsDartTagPicture,
-    description: "A first-person dart tag game that involves players tagging each other using darts in a dynamic and interactive environment.",
-    github: "https://github.com/Jawlt/first-person-dart-tag",
-    skills: [
-      { name: "Unity", icon: unityIcon },
-      { name: "C#", icon: csharpIcon }
-    ]
-  },
-  {
-    title: "Localization Tool",
-    image: localizationToolPicture,
-    description: "A simple localization tool, which helps support multiple languages within a game.",
-    github: "https://github.com/Jawlt/LocalizationTool",
-    skills: [
-      { name: "Unity", icon: unityIcon },
-      { name: "C#", icon: csharpIcon }
-    ]
-  },
-  {
-    title: "Portfolio Website",
-    image: portfolioWebsiteImage,
-    description: "A website that was developed to showcase my skill as a developer.",
-    github: "https://github.com/Jawlt/portfolio-website",
-    skills: [
-      { name: "HTML", icon: htmlIcon },
-      { name: "CSS", icon: cssIcon },
-      { name: "JavaScript", icon: javascriptIcon },
-      { name: "React", icon: reactIcon }
-    ]
-  },
-  {
-    title: "TCP/UDP Chatroom",
-    image: tempPicture,
-    description: "Locally hosted TCP/UDP server for clients to chat.",
-    github: "https://github.com/Jawlt/TCP-UDP-Chatroom",
-    skills: [
-      { name: "Python", icon: pythonIcon}
-    ]
-  },
-  {
-    title: "ToDo List",
-    image: toDoListPicture,
-    description: "Mini solo project where I developed a functional day-to-day ToDo List, where the user can have tasks for general purposes or university tasks.",
-    github: "https://github.com/Jawlt/ToDoList",
-    skills: [
-      { name: "HTML", icon: htmlIcon },
-      { name: "CSS", icon: cssIcon },
-      { name: "JavaScript", icon: javascriptIcon },
-      { name: "jQuery", icon: jQueryIcon },
-      { name: "Node.js", icon: nodejsIcon },
-      { name: "Express.js", icon: expressjsIcon }
-    ]
-  },
-  {
-    title: "Spotify Playlist Merger",
-    image: spotifyImage,
-    description: "This project is a Spotify playlist merger developed for house parties. It allows the users to combine multiple guest playlists into one, ensuring a great music experience for all guests. The application uses an easy-to-use interface, making it simple to create the perfect party playlist from various sources.",
-    github: "https://github.com/Jawlt/Spotify-Controller",
-    skills: [
-      { name: "C++", icon: cplusplusIcon },
-      { name: "Qt", icon: qtIcon }
-    ]
-  },
-  {
-    title: "Minesweeper Game",
-    image: minesweeperImage,
-    description: "A modern remake of the classic Minesweeper game. The aim is to deliver a polished, user-friendly experience that retains the charm of the original game.",
-    github: "https://github.com/Jawlt/Minesweeper",
-    skills: [
-      { name: "C++", icon: cplusplusIcon },
-      { name: "Qt", icon: qtIcon }
-    ]
-  },
-  {
-    title: "SpellChecker App",
-    image: spellCheckerImage,
-    description: "This project is designed to accurately check and correct spelling in text, featuring an intuitive user interface. The aim is to provide a user-friendly tool for improving written communication.",
-    github: "https://github.com/Jawlt/SpellChecker",
-    skills: [
-      { name: "Java", icon: javaIcon }
-    ]
-  },
-  {
-    title: "Mini Greenhouse",
-    image: greenhouseImage,
-    description: "This project is designed to help grow all types of plants. It features adjustable parameters, allowing user to control and optimize the growing conditions for various plants. The goal is to replicate various environments.",
-    github: "https://github.com/Jawlt/mini-greenhouse",
-    skills: [
-      { name: "Arudino", icon: arduinoIcon }
-    ]
-  },
-  {
-    title: "Simon Game",
-    image: simonGamePicture,
-    description: "This mini project was created as a fun introduction to the jQuery JavaScript library.",
-    github: "https://github.com/Jawlt/simon-game",
-    skills: [
-      { name: "HTML", icon: htmlIcon },
-      { name: "CSS", icon: cssIcon },
-      { name: "JavaScript", icon: javascriptIcon },
-      { name: "jQuery", icon: jQueryIcon }
-    ]
-  },
-  {
-    title: "TO BE ADDED",
-    image: tempPicture,
-    description: "This is project is still being developed.",
-    github: "https://github.com/Jawlt",
-    skills: []
-  },
-  {
-    title: "TO BE ADDED",
-    image: tempPicture,
-    description: "This is project is still being developed.",
-    github: "https://github.com/Jawlt",
-    skills: []
-  }
-];
-
-function Projects() {
-  const [expandedCard, setExpandedCard] = useState(null);
-  const cardRefs = useRef([]);
+    }, [backendAPI]);
 
     const handleCardClick = (index) => {
         setExpandedCard(expandedCard === index ? null : index);
@@ -280,7 +127,7 @@ function Projects() {
                                 {project.skills.map((skill, i) => (
                                     <img 
                                         key={i} 
-                                        src={skillIcons[skill.name]} 
+                                        src={skillIcons[skill.name] || tempPicture} 
                                         alt={skill.name} 
                                         title={skill.name} 
                                         className="skill-icon" 

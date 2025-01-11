@@ -1,7 +1,7 @@
 name: Build and Deploy React App to Github Pages
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -9,28 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    
-    - name: Install dependencies
-      run: npm install
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Build
-      run: npm run build
+      - name: Install dependencies
+        run: npm install
 
-    # Create the .env file dynamically during the workflow run
-    - name: Create .env file
-      run: |
-        echo "REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
-        echo "REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
-        echo "REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
+      - name: Build
+        run: npm run build
 
-    - name: Verify .env file creation
-      run: cat .env
+      # Create the .env file dynamically during the workflow run
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
+          echo "REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
+          echo "REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
+          echo "REACT_APP_BACKEND_API=${{ secrets.BACKEND_API }}" >> .env
 
-    - name: Deploy 
-      run: |
-        git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
-        git config --global user.email email:${{ secrets.GITHUB_EMAIL }}
-        git remote set-url origin https://access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   
-        npm run deploy
+      - name: Verify .env file creation
+        run: cat .env
+
+      - name: Deploy
+        run: |
+          git config --global user.name name:${{ secrets.GITHUB_USERNAME }}
+          git config --global user.email email:${{ secrets.GITHUB_EMAIL }}
+          git remote set-url origin https://access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   
+          npm run deploy

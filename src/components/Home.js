@@ -91,15 +91,7 @@ export function Home() {
               showCursor={false}
             />
           </h3>
-        </div>
-        <div className="picture-container">
-          <div className="picture">
-            <img src={images[currentImageIndex]} alt="Profile" />
-          </div>
-          <div className="picture-background-1"></div>
-          <div className="picture-background-2"></div>
-        </div>
-        <div className="button-container">
+          <div className="button-container">
           <button className="resume" onClick={onResumeClick}>
             <p><i className="far fa-file-alt"></i> Resume</p>
           </button>
@@ -108,6 +100,14 @@ export function Home() {
           </button>
           <a href="https://linkedin.com/in/jwalant-p" className="linkden" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin" ></i></a>
           <a href="https://github.com/Jawlt" className="github" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
+        </div>
+        </div>
+        <div className="picture-container">
+          <div className="picture">
+            <img src={images[currentImageIndex]} alt="Profile" />
+          </div>
+          <div className="picture-background-1"></div>
+          <div className="picture-background-2"></div>
         </div>
       </div>
       {isContactOpen && (

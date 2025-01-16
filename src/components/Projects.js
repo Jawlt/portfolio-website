@@ -126,7 +126,7 @@ const Projects = () => {
                                 {project.skills.map((skill, i) => (
                                     <img 
                                         key={i} 
-                                        src={skillIcons[skill.name] || tempPicture} 
+                                        src={skillIcons[skill.name]} 
                                         alt={skill.name} 
                                         title={skill.name} 
                                         className="skill-icon" 
